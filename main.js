@@ -1,5 +1,3 @@
-if (require('electron-squirrel-startup')) return;
-
 // main.js
 
 // Modules to control application life and create native browser window
@@ -9,6 +7,10 @@ const {
   dialog,
   ipcMain
 } = require('electron');
+
+// run this as early in the main process as possible
+if (require('electron-squirrel-startup')) app.quit();
+
 const fs = require('fs');
 const path = require('path');
 const clipboard = require('electron-clipboard-extended');
