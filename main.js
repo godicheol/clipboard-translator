@@ -33,29 +33,29 @@ const PROVIDERS = [
     name: "Google",
     host: "https://translate.google.com/?op=translate&text=<text>&sl=<from>&tl=<to>",
     width: 512,
-    height: 440,
+    height: 800,
   }, {
     name: "Papago",
     host: "https://papago.naver.com/?st=<text>&sk=<from>&tk=<to>",
     width: 512,
-    height: 440,
+    height: 800,
     defaultFrom: "auto",
   }, {
     name: "Deepl",
     host: "https://www.deepl.com/translator#<from>/<to>/<text>", // https://www.deepl.com/translator#en/de/text
     width: 600,
-    height: 540,
+    height: 800,
     defaultFrom: "en",
   }, {
     name: "Bing",
     host: "https://www.bing.com/translator?from=<from>&to=<to>&text=<text>",
     width: 512,
-    height: 666,
+    height: 800,
   }, {
     name: "Yandex",
     host: "https://translate.yandex.com/?source_lang=<from>&target_lang=<to>&text=<text>",
-    width: 520,
-    height: 520,
+    width: 512,
+    height: 800,
     defaultFrom: "en",
   }
 ];
@@ -63,8 +63,8 @@ const PROVIDERS = [
 const createWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 256,
+    height: 256,
     alwaysOnTop: true,
     icon: path.join(__dirname, "assets/icons/icon.png"),
     webPreferences: {
