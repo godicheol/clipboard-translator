@@ -1,9 +1,9 @@
 module.exports = {
   packagerConfig: {
-    name: "Electon Application Builder",
-    executableName: "electron-application-builder",
+    name: "Clipboard translator",
+    executableName: "clipboard-translator",
     asar: false,
-    appBundleId: "com.godicheol.electronapplicationbuilder",
+    appBundleId: "com.godicheol.clipboardtranslator",
     icon: "./assets/icons/icon"
   },
   rebuildConfig: {},
