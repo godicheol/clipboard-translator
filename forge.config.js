@@ -11,13 +11,6 @@ module.exports = {
   rebuildConfig: {},
   makers: [
     {
-      name: '@electron-forge/maker-squirrel',
-      config: {
-        setupIcon: path.resolve(__dirname, "./assets/icons/icon.ico"),
-		    iconUrl: path.resolve(__dirname, "./assets/icons/icon.ico"),
-      },
-    },
-    {
       name: '@electron-forge/maker-zip',
       platforms: ['darwin', 'linux', 'win32'],
     },
@@ -36,6 +29,13 @@ module.exports = {
     {
       name: '@electron-forge/maker-rpm',
       config: {},
+    },
+    {
+      name: '@electron-forge/maker-squirrel',
+      config: {
+        setupIcon: path.resolve(__dirname, "./assets/icons/icon.ico"),
+		    iconUrl: path.resolve(__dirname, "./assets/icons/icon.ico"),
+      },
     },
   ],
 };
