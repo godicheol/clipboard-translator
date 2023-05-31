@@ -6,7 +6,7 @@ module.exports = {
     executableName: "clipboard-translator",
     asar: false,
     appBundleId: "com.godicheol.clipboardtranslator",
-    icon: "./assets/icons/icon",
+    icon: path.resolve(__dirname, "./assets/icons/icon"),
   },
   rebuildConfig: {},
   makers: [
