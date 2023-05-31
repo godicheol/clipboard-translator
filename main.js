@@ -52,6 +52,7 @@ const PROVIDERS = [
     host: "https://translate.yandex.com/?source_lang=<from>&target_lang=<to>&text=<text>",
     width: 520,
     height: 520,
+    defaultFrom: "en",
   }
 ];
 
