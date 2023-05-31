@@ -1,3 +1,5 @@
+if (require('electron-squirrel-startup')) return;
+
 // main.js
 
 // Modules to control application life and create native browser window

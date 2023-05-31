@@ -1,16 +1,21 @@
+const path = require("path");
+
 module.exports = {
   packagerConfig: {
-    name: "Clipboard translator",
+    name: "Clipboard Translator",
     executableName: "clipboard-translator",
     asar: false,
     appBundleId: "com.godicheol.clipboardtranslator",
-    icon: "./assets/icons/icon"
+    icon: path.resolve(__dirname, "./assets/icons/icon"),
   },
   rebuildConfig: {},
   makers: [
     {
       name: '@electron-forge/maker-squirrel',
-      config: {},
+      config: {
+        setupIcon: path.resolve(__dirname, "./assets/icons/icon.ico"),
+		    iconUrl: path.resolve(__dirname, "./assets/icons/icon.ico"),
+      },
     },
     {
       name: '@electron-forge/maker-zip',
@@ -19,7 +24,8 @@ module.exports = {
     {
       name: '@electron-forge/maker-dmg',
       config: {
-        background: "./assets/imgs/background.png",
+        background: path.resolve(__dirname, "./assets/imgs/background.png"),
+        icon: path.resolve(__dirname, './assets/icons/icon.icns'),
         format: "ULFO"
       }
     },
